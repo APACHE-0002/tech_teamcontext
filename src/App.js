@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { UserProvider } from './context/UserContext';
+import { Dashboard } from './Dashboard';
+
 import './styles.css'
 
 
 export default function App() {
-  return (
-    <div>
-      <h1>churras</h1>
-    </div>
 
+  return (
+    <UserProvider>
+    <div className="App">
+      <header>This is our nav</header>
+
+      <Dashboard/>
+    </div>
+    </UserProvider>
   );
 }
